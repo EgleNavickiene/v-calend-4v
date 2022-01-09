@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar-ToDo-app</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="row row-of-page-parts">
+      <div id="container">
+        <div id="header">
+          <div class="header-content">
+            <div>
+              <button id="backButton">Prev. month</button>
+            </div>
+
+            <div id="monthDisplay"></div>
+
+            <div>
+              <button id="nextButton">Next month</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="weekdays">
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+          <div>Sunday</div>
+        </div>
+
+        <div id="calendar"></div>
+      </div>
+
+      <!-- form? -->
+      <div id="newEventModal">
+        <h3 ">New Event</h3>
+
+        <div id="create-new-event">
+          <div class="input-group">
+            <input class="event-details" id="eventTitleInput" name="title" placeholder="Event Title" />
+            <p class="error-message">Error message</p>
+          </div>
+          
+          <!-- event details-->
+          <div class="input-group">
+            <label for="type" >Select a type of event</label>
+            <select
+              class="event-details"
+              id="eventTypeInput"
+              name="type"
+              required
+            > 
+            <option value="0"></option>        
+              <option value="call">Call</option>
+              <option value="meeting">Meeting</option>
+              <option value="out_of_office">Out of office</option>
+            </select>
+            <p class="error-message">Error message</p>
+          </div>
+          
+          <div class=" input-group">
+            <label for="date" >Select a date of event</label>
+            <input type="date" required class="event-details" name="event_date" id="eventDateInput" />
+            <p class="error-message">Error message</p>
+          </div>        
+  
+          <div class="event-time">
+            <div class="event-start-end">
+              <label for="time">Time: </label>
+              <input
+                type="time" required          
+                id="eventStartInput" 
+                name="event_start"               
+                placeholder="Event Start"
+              />
+    
+              <input
+                id="eventEndInput"
+                name="event_end"
+                type="time" required                
+                class="event-start-end"
+                placeholder="Event End"
+              />
+            </div>          
+            <p class="error-message">Error message</p>
+          </div>
+          
+          <div class=" input-group ">
+            <textarea
+              id="eventDescriptionInput"
+              type="text"
+              placeholder="Add a description"              
+              class="event-details"
+            ></textarea>
+          </div>        
+          <!-- event details end-->
+          <div>
+            <button id="saveButton" type="submit">Save</button>
+            <button id="cancelButton" type="submit">Cancel</button>
+          </div>
+        </div>
+
+
+        
+      </div>
+
+      <div id="deleteEventModal">
+        <h3>Event</h3>
+
+        <h6 id="eventText"></h6>
+        <p id="eventType"></p>
+        <p id="eventDate"></p>
+        <p id="eventStart"></p>
+        <p id="eventEnd"></p>
+        <p id="eventDescription"></p>
+
+        <button id="closeButton" type="submit">Close</button>
+        <button id="deleteButton" type="submit">Delete</button>
+        
+      </div>
+
+      <!-- <div id="modalBackDrop"></div> -->
+      <!--  -->
+
+
+
+      <!-- ----------------------- -->
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

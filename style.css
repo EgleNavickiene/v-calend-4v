@@ -1,0 +1,242 @@
+body {
+    display: flex;
+    margin-top: 30px;
+    background-color: #FFFCFF;
+    /* box-sizing: border-box; */
+  }
+
+  .row {
+    display: flex;
+  }
+
+  button {
+    width: 120px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #header {    
+    background-color: white;    
+    color: #d36c6c;
+    font-size: 26px;
+    font-family: sans-serif;    
+  }
+
+  #header button {
+    background-color:#4a9fc3;
+  }
+
+  .header-content {
+    padding: 10px;
+    margin: 5px;
+    border: cadetblue solid 1px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #container {
+    background-color: rgb(233, 229, 222);
+    width: 770px;
+    padding: 0 15px;
+    margin-left: 150px;
+  }
+
+  #weekdays {
+    width: 100%;
+    display: flex;
+    font-family: sans-serif;
+    color: #247BA0;
+    background-color: white;
+  }
+
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+    border: cadetblue solid 1px;
+    text-align: center;
+  }
+
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    color: darkcyan;
+    font-family: sans-serif;
+    font-size: larger;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .day:hover {
+    background-color: #e8faed;
+  }
+  
+  .day + #currentDay {
+    background-color:#e8f4fa;
+  }
+
+  .event {
+    font-size: 14px;
+    padding: 3px;
+    background-color: #4a9fc3;
+    color: white;
+    border-radius: 5px;
+    min-height: 20px;
+    max-height: 450px;
+    overflow: hidden;
+  }
+
+  .padding {
+    cursor: default !important;
+    background-color: #f1f0f09a !important;
+    box-shadow: none !important;
+  }
+
+  /* -------------------- */
+
+    .event-details {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  .input-group {
+    margin: 15px 0;
+    padding: 0 15px;
+  }
+
+  .input-group label {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  #newEventModal  {
+    display: none;
+    z-index: 20;
+    padding: 15px;
+    background-color: rgb(233, 229, 222);
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    max-width: 350px;
+    top: 30px;
+    left: 1050px;
+    position: absolute;
+    font-family: sans-serif;
+  }
+
+  #deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 15px;
+    background-color: rgb(233, 229, 222);
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    max-width: 450px;
+    bottom: 20px;
+    left: 1050px;
+    position: absolute;
+    font-family: sans-serif;
+  }
+
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+  }
+
+  /*  */
+  #eventTypeInput {
+    color: black;
+  }
+  .green {
+    background-color: rgba(0, 255, 0, 0.5);
+  }
+  .yellow {
+    background-color: rgba(255, 255, 0, 0.5);
+  }
+  .red {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+  /*  */
+
+  #eventTitleInput.error, #eventTypeInput.error,
+  #eventDateInput.error, #eventStartInput.error,
+  #eventEndInput.error {
+    border: 2px solid red;    
+  }
+
+  .error input {
+    border: 2px solid red; 
+  }
+
+  .error-message {   
+    font-size: small; 
+    color: red;    
+    margin-top: 1px;
+    margin-bottom: 5px;
+    display: none;
+  }  
+
+  .event-time .error-message {
+    margin-left: 20px;
+  }
+
+  .event-start-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #eventDescriptionInput {
+    min-height: 100px;
+  }
+
+  #cancelButton, #deleteButton {
+    background-color: #d36c6c;
+  }
+
+  #saveButton, #closeButton {
+    background-color: #92a1d1;
+  }
+
+  #eventText {
+    font-size: 14px;
+  }
+
+  /* 
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8); 
+  }
+  */
